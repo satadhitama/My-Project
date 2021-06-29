@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Rock, Scissor, Paper</title>
+</head>
+<body>
+  <div class="game-container">
+    <div class="game-board">
+      <div class="enemy-board">
+        <div class="info-bar">
+          <div class="info-left-container">
+            <p id="pause" data-is-paused="false" onclick="btnPause(event)">&#10074&#10074</p>
+            <p class="countdown bar">00</p>
+            <button id="btn-reset" class="btn" onclick="btnReset()">Reset</button>
+          </div>
+          <div class="center-container">
+          </div>
+          <div class="info-right-container">
+            <p id="current-score" class="score bar">0</p>
+            <p id="best-score" class="score bar">0</p>
+          </div>
+        </div>
+        <div style="background-image: url();" class="card-container enemy"></div>
+      </div>
+      <div class="player-board">
+        <div style="background-image: url();" class="card-container player"></div>
+        <div class="card-picker">
+          <div style="background-image: url(assets/rock.png);" data-pick="1" onclick="human.btnPick(event)" class="card-container pick"></div>
+          <div style="background-image: url(assets/paper.png);" data-pick="2" onclick="human.btnPick(event)" class="card-container pick"></div>
+          <div style="background-image: url(assets/scissor.png);" data-pick="3" onclick="human.btnPick(event)"class="card-container pick"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-container">
+    <div class="game-set-modal">
+      <p id="modal-close" onclick="closeModal()">&times;</p>
+      <div class="form">
+        <input id="round-time" type="text" placeholder="round time (s)">
+        <button class="btn" onclick="startGame()">START</button>
+      </div>
+      <p id="input-warning" class="hide">Input Must be Number!</p>
+    </div>
+    <div class="modal-bg" onclick="closeModal()">
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

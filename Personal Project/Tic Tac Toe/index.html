@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <div class="game-container">
+    <div class="info-bar-container">
+      <div class="win-container">
+        <p id="player-1" class="info-bar-text" style="color: rgb(115, 115, 223);">0</p>
+      </div>
+      <div class="current-player-container">
+        <p id="current-player" class="info-bar-text" style="color: rgb(115, 115, 223);">Player 1</p>
+      </div>
+      <div class="win-container">
+        <p id="player-2" class="info-bar-text" style="color: rgb(223, 75, 75);">0</p>
+      </div>
+    </div>
+    <div class="game-board" onclick="cellClick(event)">
+      <div class="cell-00" data-cell-position="00"></div>
+      <div class="cell-01" data-cell-position="01"></div>
+      <div class="cell-02" data-cell-position="02"></div>
+      <div class="cell-10" data-cell-position="10"></div>
+      <div class="cell-11" data-cell-position="11"></div>
+      <div class="cell-12" data-cell-position="12"></div>
+      <div class="cell-20" data-cell-position="20"></div>
+      <div class="cell-21" data-cell-position="21"></div>
+      <div class="cell-22" data-cell-position="22"></div>
+    </div>
+    <div class="reset-container">
+      <button class="btn reset" onclick="btnReset()">Reset</button>
+    </div>
+  </div>
+  <div class="modal-container">
+    <div id="win" class="modal not-displayed">
+      <div class="modal-banner win">
+        <p>Winner</p>
+      </div>
+      <div class="winner-player">
+        <p id="player-win"></p>
+      </div>
+      <div class="button-container">
+        <button class="btn continue" onclick="continueGame(event)">Continue</button>
+      </div>
+    </div>
+    <div id="draw" class="modal not-displayed">
+      <div class="modal-banner draw">
+        <p>DRAW</p>
+      </div>
+      <div class="button-container">
+        <button class="btn draw" onclick="continueGame(event)">Continue</button>
+      </div>
+    </div>
+    <div id="reset" class="modal not-displayed">
+      <div class="modal-banner reset">
+        <p>Want to Restart Game?</p>
+      </div>
+      <div class="button-container">
+        <button class="btn yes" onclick="resetGame()">Yes</button>
+        <button class="btn no" onclick="continueGame(event)">No</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

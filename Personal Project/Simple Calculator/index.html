@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <main>
+    <div class="history-container">
+      <div class="result-display">
+        <p class="display-num result">0</p>
+      </div>
+      <div class="history">
+      </div>
+      <button class="btn clear-history" onclick="clearHistory()">Clear</button>
+    </div>
+    <div class="calculator-container">
+      <div class="display">
+        <p class="display-num operation">0</p>  
+      </div>
+      <div class="operator-container">
+        <button class="btn num" data-button-value="1" onclick="button(event)">1</button>
+        <button class="btn num" data-button-value="2" onclick="button(event)">2</button>
+        <button class="btn num" data-button-value="3" onclick="button(event)">3</button>
+        <button class="btn num" data-button-value="4" onclick="button(event)">4</button>
+        <button class="btn num" data-button-value="5" onclick="button(event)">5</button>
+        <button class="btn num" data-button-value="6" onclick="button(event)">6</button>
+        <button class="btn num" data-button-value="7" onclick="button(event)">7</button>
+        <button class="btn num" data-button-value="8" onclick="button(event)">8</button>
+        <button class="btn num" data-button-value="9" onclick="button(event)">9</button>
+        <button class="btn zero num" data-button-value="0" onclick="button(event)">0</button>
+        <button class="btn clear operator" data-button-value="clear" onclick="button(event)">C</button>
+        <button class="btn comma num" data-button-value="." onclick="button(event)">.</button>
+        <button class="btn del operator" data-button-value="del" onclick="button(event)">&DoubleLeftArrow;</button>
+        <button class="btn plus-min operator" data-button-value="plus-min" onclick="button(event)">&PlusMinus;</button>
+        <button class="btn times operator" data-button-value="*" onclick="button(event)">&times;</button>
+        <button class="btn div operator" data-button-value="/" onclick="button(event)">&div;</button>
+        <button class="btn minus operator" data-button-value="-" onclick="button(event)">&minus;</button>
+        <button class="btn plus operator" data-button-value="+" onclick="button(event)">&plus;</button>
+        <button class="btn equal operator" data-button-value="=" onclick="button(event)">&equals;</button>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
